@@ -34,6 +34,7 @@ import { PageModifCommandeAdminComponent } from './page-modif-commande-admin/pag
 import { CommandeUtilisateurComponent } from './commande-utilisateur/commande-utilisateur.component';
 import { UnauthorizedInterceptor } from './interceptor/unauthorizedInterceptor';
 import { SafePipe } from './safe.pipe';
+import { ListeProduitCommandeAdminComponent } from './liste-produit-commande-admin/liste-produit-commande-admin.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { SafePipe } from './safe.pipe';
     ProfilComponent,
     PageModifCommandeAdminComponent,
     CommandeUtilisateurComponent,
-    SafePipe
+    SafePipe,
+    ListeProduitCommandeAdminComponent
   ],
   imports: [
     BrowserModule,
