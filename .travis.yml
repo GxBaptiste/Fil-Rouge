@@ -2,10 +2,11 @@ language: node_js
 node_js:
   - "9"
 before_script:
+  - cd Projet-Fil-Rouge/Fil-Rouge-FrontEnd/
   - npm install
-script: cd Projet-Fil-Rouge/FIl-Rouge-FrontEnd/ npm run build
+script: npm run build
 deploy:
-  local-dir: dist/Projet-Fil-Rouge/FIl-Rouge-FrontEnd
+  local-dir: dist/Fil-Rouge-FrontEnd
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
