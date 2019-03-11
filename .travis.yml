@@ -3,7 +3,7 @@ node_js:
   - "9"
 before_script:
   - npm install
-script: cd Projet-Fil-Rouge/FIl-Rouge-FrontEnd npm run build
+script: cd Projet-Fil-Rouge/FIl-Rouge-FrontEnd/ npm run build
 deploy:
   local-dir: dist/Projet-Fil-Rouge/FIl-Rouge-FrontEnd
   provider: pages
