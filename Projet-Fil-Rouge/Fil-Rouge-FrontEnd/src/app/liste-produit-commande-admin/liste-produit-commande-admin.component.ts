@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CommandeService } from '../service/commande.service';
-import { Commande, Produit } from '../model';
+import { Produit } from '../model';
 
 @Component({
   selector: 'app-liste-produit-commande-admin',

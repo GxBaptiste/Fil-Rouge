@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class UnauthorizedInterceptor implements HttpInterceptor {
-    constructor(private authenticationService: LoginService, private router: Router) {}
+    constructor() {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(request).pipe(catchError(err => {

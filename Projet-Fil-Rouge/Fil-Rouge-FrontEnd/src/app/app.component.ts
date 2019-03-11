@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Utilisateur } from './model';
-import { PanierService } from './service/panier.service';
-import { LoginService } from './service/login.service';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({

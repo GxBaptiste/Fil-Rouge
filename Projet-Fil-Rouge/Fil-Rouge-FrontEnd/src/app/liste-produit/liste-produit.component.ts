@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Produit } from '../../app/model';
-import { DataService } from '../service/data.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { ProduitService } from '../service/produit.service';
 
@@ -29,9 +28,6 @@ export class ListeProduitComponent implements OnInit {
       this.categorie2 = params.get('cat');
       this.nom = params.get('nom')
 
-      // console.log("CAT1 :" + this.categorie);
-      // console.log("CAT2 :" + this.categorie2)
-
       if (this.categorie2 == null && this.nom == null) {
         this.maxResultPerPage = 3
         this.categorie2 = this.categorie
@@ -43,7 +39,6 @@ export class ListeProduitComponent implements OnInit {
 
       this._produitService.usualSearch(1, this.nom, this.categorie2, "", this.maxResultPerPage).subscribe(
         value => {
-          // console.log(value);
           this.produits = value.produits;
           this.resultTotal = value.resultNb;
         })
@@ -55,7 +50,6 @@ export class ListeProduitComponent implements OnInit {
   }
 
   search(pageActuelle: number, categorie: string) {
-    // console.log("SCAT1 :" + categorie);
     this._produitService.usualSearch(pageActuelle, this.nom, categorie, "", this.maxResultPerPage).subscribe(
       value => {
         console.log(value);

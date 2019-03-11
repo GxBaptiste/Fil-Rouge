@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommandeService } from '../service/commande.service';
-import { Commande, Utilisateur, Produit } from '../model';
+import { Commande } from '../model';
 
 @Component({
   selector: 'app-histo-commandes-admin',

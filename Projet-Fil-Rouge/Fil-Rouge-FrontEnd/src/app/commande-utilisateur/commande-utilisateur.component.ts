@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Commande } from '../model';
 import { CommandeService } from '../service/commande.service';
-import { ActivatedRoute } from '@angular/router';
 import { LoginService } from '../service/login.service';
 
 @Component({

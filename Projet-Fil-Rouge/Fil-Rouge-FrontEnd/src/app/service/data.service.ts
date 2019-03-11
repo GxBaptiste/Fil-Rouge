@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Produit } from '../model';
-import { of, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { tap, map, catchError } from 'rxjs/operators';
-import { Command } from 'protractor';
 
 
 
