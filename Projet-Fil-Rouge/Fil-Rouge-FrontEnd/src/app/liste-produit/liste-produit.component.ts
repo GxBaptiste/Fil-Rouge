@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Produit } from '../../app/model';
-import { DataService } from '../service/data.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { ProduitService } from '../service/produit.service';
 
