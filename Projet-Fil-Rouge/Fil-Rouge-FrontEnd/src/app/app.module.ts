@@ -29,7 +29,6 @@ import { FicheProduitComponent } from './fiche-produit/fiche-produit.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProfilComponent } from './profil/profil.component';
-import { ListeProduitCommandeAdminComponent } from './liste-produit-commande-admin/liste-produit-commande-admin.component';
 import { ModificationProduitAdminComponent } from './modification-produit-admin/modification-produit-admin.component';
 import { PageModifCommandeAdminComponent } from './page-modif-commande-admin/page-modif-commande-admin.component';
 import { CommandeUtilisateurComponent } from './commande-utilisateur/commande-utilisateur.component';
@@ -64,7 +63,6 @@ import { SafePipe } from './safe.pipe';
     SignUpComponent,
     FooterComponent,
     ProfilComponent,
-    ListeProduitCommandeAdminComponent,
     PageModifCommandeAdminComponent,
     CommandeUtilisateurComponent,
     SafePipe

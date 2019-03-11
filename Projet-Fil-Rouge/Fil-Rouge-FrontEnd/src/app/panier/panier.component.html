@@ -1,44 +1,43 @@
-
-<section style="background:url('http://www.maximumwall.com/wp-content/uploads/2016/11/fond-ecran-wallpaper-image-fonds-ecran-abstrait-hd-12.jpg')">
-<div class="test" >
-  <div class="prix">
-    <h2><b>Prix total du panier : {{prixTotal}}€</b></h2>
+<section
+  style="background:url('http://www.maximumwall.com/wp-content/uploads/2016/11/fond-ecran-wallpaper-image-fonds-ecran-abstrait-hd-12.jpg')">
+  <div class="test">
+    <div class="prix">
+      <h2><b>Prix total du panier : {{prixTotal}}€</b></h2>
+    </div>
+    <br>
+    <div class="col-3"><button type="button" class="btn btn-success" (click)="ValiderCommande()">Valider la
+        commande</button>
+    </div>
   </div>
   <br>
-  <div class="col-3"><button type="button" class="btn btn-success" (click)="ValiderCommande()">Valider la
-      commande</button>
-  </div>
-  {{message}}
-</div>
-<br>
-<div class="accordion" id="accordionExample" *ngFor="let obj of listePanier; index as index">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
+  <div class="accordion" id="accordionExample" *ngFor="let obj of listePanier; index as index">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
 
-        <div class="panier">
-          <div class="col-2">
-            <button class="btn btn-link" type="button" data-toggle="collapse" aria-expanded="true"
-              aria-controls="collapseOne" [attr.data-target]="'#obj'+obj.produit.id">
-              <img src={{obj.produit.image}} id="Image" />
-            </button>
+          <div class="panier">
+            <div class="col-2">
+              <button class="btn btn-link" type="button" data-toggle="collapse" aria-expanded="true"
+                aria-controls="collapseOne" [attr.data-target]="'#obj'+obj.produit.id">
+                <img src={{obj.produit.image}} id="Image" />
+              </button>
+            </div>
+            <div class="col-4">Nom du produit : {{obj.produit.nom}}</div>
+            <div class="col-2">Prix du produit : {{ obj.produit.prix }}</div>
+            <div class="col-2">Quantite : {{ obj.quantite }}</div>
+            <div class="col-2">
+              <button type="button" class="btn btn-danger" (click)="deleteProduit(obj.produit.id)">Supprimer</button>
+            </div>
           </div>
-          <div class="col-4">Nom du produit : {{obj.produit.nom}}</div>
-          <div class="col-2">Prix du produit : {{ obj.produit.prix }}</div>
-          <div class="col-2">Quantite : {{ obj.quantite }}</div>
-          <div class="col-2">
-            <button type="button" class="btn btn-danger" (click)="deleteProduit(obj.produit.id)">Supprimer</button>
-          </div>
+
+        </h5>
+      </div>
+      <div id="obj{{obj.produit.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <app-fiche-detail-produit-panier [produit]="obj.produit" [quantite]="obj.quantite" [index]="index">
+          </app-fiche-detail-produit-panier>
         </div>
-
-      </h5>
-    </div>
-    <div id="obj{{obj.produit.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        <app-fiche-detail-produit-panier [produit]="obj.produit" [quantite]="obj.quantite" [index]="index">
-        </app-fiche-detail-produit-panier>
       </div>
     </div>
   </div>
-</div>
 </section>

@@ -4,10 +4,12 @@
 
       <div *ngIf="produit.actif; else elseBlock">
         Dispo : Oui
-        <ng-template #elseBlock>
-          Dispo : Non
-        </ng-template>
       </div>
+      <ng-template #elseBlock>
+        <div>
+          Dispo : Non
+        </div>
+      </ng-template>
     </div>
 
 
