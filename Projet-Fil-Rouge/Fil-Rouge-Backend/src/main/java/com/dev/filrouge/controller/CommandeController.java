@@ -18,7 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dev.filrouge.dto.CommandeDto;
 import com.dev.filrouge.model.Commande;
+import com.dev.filrouge.model.Produit;
+import com.dev.filrouge.model.ProduitCommande;
 import com.dev.filrouge.service.CommandeService;
+import com.dev.filrouge.service.ProduitService;
 import com.dev.filrouge.service.UtilisateurService;
 
 @RestController
@@ -28,7 +31,10 @@ public class CommandeController {
 
 	@Autowired
 	private CommandeService commandeService;
-	
+
+	@Autowired
+	private ProduitService produitService;
+
 	@Autowired
 	private UtilisateurService utilisateurService;
 
@@ -36,6 +42,13 @@ public class CommandeController {
 	public void create(@RequestBody CommandeDto commandeDto) {
 		Commande commandeNew = CommandeDto.toCommande(commandeDto);
 		commandeService.save(commandeNew);
+		for (ProduitCommande produit : commandeNew.getProduitCommandes()) {
+			Long quantite = produit.getQuantite();
+			Produit aux = produitService.produitRepo.findById(produit.getId().getProduit().getId()).get();
+			aux.setStock(Math.toIntExact(aux.getStock() - quantite));
+				produitService.produitRepo.saveAndFlush(aux);
+		}
+
 	}
 
 	@GetMapping
@@ -58,7 +71,10 @@ public class CommandeController {
 		List<Commande> listeCommande = getCommande();
 		List<Commande> res = new ArrayList<>();
 		for (Commande c : listeCommande) {
-			if (utilisateurService.findByEmail(principal.getName()).getId().equals(id)) {
+			System.out.println(utilisateurService.findByEmail(principal.getName()).getId() +" "+c.getUtilisateur().getId());
+			if (utilisateurService.findByEmail(principal.getName()).getId().equals(id) && utilisateurService.findByEmail(principal.getName()).getId().equals(
+					c.getUtilisateur().getId())){
+				
 				res.add(c);
 			}
 		}

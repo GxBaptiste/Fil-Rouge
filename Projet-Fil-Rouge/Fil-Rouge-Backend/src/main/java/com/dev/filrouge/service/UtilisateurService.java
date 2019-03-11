@@ -10,7 +10,7 @@ import com.dev.filrouge.repo.UtilisateurRepo;
 public class UtilisateurService {
 
     @Autowired
-    UtilisateurRepo utilisateurRepo;
+	public UtilisateurRepo utilisateurRepo;
 
     public void save(Utilisateur user) {
         utilisateurRepo.save(user);
