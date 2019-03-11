@@ -16,8 +16,8 @@
 
   <div class="form-row">
     <div class="form-group col-md-4">
-      <input type="file" name="image" accept="image/png, image/jpeg" #champImage="ngModel"
-        [(ngModel)]="produitSave.image" />
+      <label for="prix">Url de l'image</label>
+      <input type="url" name="image" class="form-control" #champImage="ngModel" [(ngModel)]="produitSave.image" />
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">Categorie</label>
