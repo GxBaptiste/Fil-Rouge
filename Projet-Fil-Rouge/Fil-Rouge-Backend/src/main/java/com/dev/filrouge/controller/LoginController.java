@@ -34,7 +34,6 @@ public class LoginController {
 
     @PostMapping
     public Utilisateur createUser(@RequestBody Utilisateur utilisateur) {
-        System.out.println("*****CREATION UTILISATEUR********");
         Utilisateur newUtilisateur = new Utilisateur(passwordEncoder.encode(utilisateur.getPassword()),
                 utilisateur.getRole(), utilisateur.getName(), utilisateur.getPrenom(), utilisateur.getAdresse(),
                 utilisateur.getTelephone(), utilisateur.getEmail(), utilisateur.getDatenaissance());
@@ -54,13 +53,10 @@ public class LoginController {
 
     @PostMapping(value = "update")
     public Utilisateur updateUser(@RequestBody Utilisateur utilisateur) {
-        System.out.println("*****" + utilisateur.getPassword() + "********");
         if (utilisateur.getPassword() != null) {
-            System.out.println("*****UPDATE AVEC CHANGMT MDP********");
             utilisateur.setPassword(passwordEncoder.encode(utilisateur.getPassword()));
             utilisateurService.save(utilisateur);
         } else {
-            System.out.println("*****UPDATE SANS CHANGMT MDP********");
             utilisateur.setPassword(utilisateurService.findByEmail(utilisateur.getEmail()).getPassword());
             utilisateurService.save(utilisateur);
         }
@@ -78,7 +74,6 @@ public class LoginController {
 
     @PostMapping(value = "email")
     public Utilisateur getUserByEmail(@RequestBody String email) {
-        System.out.println("*****GET USER BY EMAIL********");
         System.out.println(utilisateurService.findByEmail(email));
         return utilisateurService.findByEmail(email);
     }

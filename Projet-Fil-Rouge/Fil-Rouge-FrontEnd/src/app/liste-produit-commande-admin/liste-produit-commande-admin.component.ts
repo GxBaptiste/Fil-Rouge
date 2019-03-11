@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Produit, PanierItems } from '../model';
+import { PanierItems } from '../model';
 
 @Component({
   selector: 'app-liste-produit-commande-admin',

@@ -1,0 +1,8 @@
+.listeProduit {
+    margin: 5% 20%;
+    display: flex;
+    /* width:66%; */
+}
+button{
+    margin-bottom: 7vh;
+}

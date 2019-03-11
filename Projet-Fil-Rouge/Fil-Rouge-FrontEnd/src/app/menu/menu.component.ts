@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter, OnChanges } from '@angular/core';
-import { NgbDropdown, NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit } from '@angular/core';
+import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ProduitService } from '../service/produit.service';
 import { LoginService } from '../service/login.service';
 import { isNullOrUndefined } from 'util';

@@ -4,9 +4,9 @@
       <h5 class="mb-0" style="align-content: center">
         <button class="btn btn-link" style="" type="button" data-toggle="collapse" aria-expanded="true"
           aria-controls="collapseOne" [attr.data-target]="'#obj'+produit.id">
-          <img src="{{produit.image}}" id="photo" />
-        </button><br />
-        <p> {{produit.nom}}</p>
+          <img src="{{produit.image}}" id="photo" alt="" />
+        </button>
+        <span>{{produit.nom}}</span>
       </h5>
     </div>
     <div id="obj{{produit.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">

@@ -9,3 +9,12 @@ p{
 .card{
     background-image: url(https://forum.nikonpassion.com/index.php?action=dlattach;topic=79819.0;attach=103580;image);
 }
+
+h5{
+    display: flex;
+    align-items: center;
+}
+
+span{
+    font-size: 1.5rem;
+}

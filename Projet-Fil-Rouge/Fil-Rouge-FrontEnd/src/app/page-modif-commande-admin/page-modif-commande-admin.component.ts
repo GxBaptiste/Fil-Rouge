@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Commande, Produit } from '../model';
+import { Component, OnInit } from '@angular/core';
+import { Commande } from '../model';
 import { CommandeService } from '../service/commande.service';
-import { reference } from '@angular/core/src/render3';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

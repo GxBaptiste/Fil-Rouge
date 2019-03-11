@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Produit, PanierItems, Commande, Utilisateur, CommandeDto, CommandeProduitDto } from '../model';
+import { Component, OnInit } from '@angular/core';
+import { Produit, PanierItems, Utilisateur, CommandeDto, CommandeProduitDto } from '../model';
 import { PanierService } from '../service/panier.service';
-import { map } from 'rxjs/operators';
 import { CommandeService } from '../service/commande.service';
 import { LoginService } from '../service/login.service';
 import { Router } from '@angular/router';
