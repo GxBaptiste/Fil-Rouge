@@ -3,3 +3,10 @@
     height: 10rem;
    
 }
+p{
+    justify-content: center;
+    color: white;
+}
+.card{
+    background-image: url(https://forum.nikonpassion.com/index.php?action=dlattach;topic=79819.0;attach=103580;image);
+}
