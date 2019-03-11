@@ -6,7 +6,7 @@ before_script:
   - npm install
 script: npm run build
 deploy:
-  local-dir: dist/
+  local-dir: 
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
