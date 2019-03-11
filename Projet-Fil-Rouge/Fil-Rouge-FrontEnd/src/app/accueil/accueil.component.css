@@ -6,32 +6,32 @@
 }
 
 .contenu{
-    background:url("https://images-ext-2.discordapp.net/external/2eq-y3X3GPg72spLJfQZ7II0iNfTf7sc9FR-4uleTxo/https/cdn.pixabay.com/photo/2018/09/16/22/08/software-3682509_640.jpg");
-    background-repeat: no-repeat;
+    background-image: url(https://3.bp.blogspot.com/-zjKE76f8HE8/WNNUTvNLbVI/AAAAAAAAEJ4/rrqxQRZtfpQlyaMVTHVsjBiIUn52aaCNgCLcB/s1600/Fond%2Bd%2527%25C3%25A9cran%2Bd%25C3%25A9grad%25C3%25A9%2Bcss%2B6.png);
     background-size: cover;
-    height:auto;
-    white-space: nowrap;   
+    position: relative;
+    background-repeat: no-repeat; 
 }
 .fond{
-    background-image: url(https://cdn.pixabay.com/photo/2017/06/14/01/43/background-2400765_960_720.jpg);
-    background-size: cover;
+    /* background-image: url(https://image.freepik.com/photos-gratuite/fond-texture_1404-59.jpg); */
+    /* background-color:lightgrey; */
     background-attachment: fixed;
-    margin: 0 15% 0 15%;
+    
 }
 h1{
-    background-image: url(https://cdn.pixabay.com/photo/2018/04/30/07/56/light-3362033_960_720.jpg);
+    /* background-color: deepskyblue; */
     background-size: cover;
     color: white;
     font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
-    font-size: 24px; 
+    font-size: 30px; 
     font-style: oblique;
     font-variant: small-caps;
     font-weight: 700;
-    line-height: 2.5;
     text-align: center;
+    color: red;   
+    text-shadow: 2px 0.5px white
 }
 .entete{
-    background-image: url(https://image.freepik.com/photos-gratuite/fond-texture_1404-59.jpg);
+    /* background-image: url(https://image.freepik.com/photos-gratuite/fond-texture_1404-59.jpg); */
     background-attachment: fixed;
     font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
     font-size: 100px; 
@@ -39,5 +39,6 @@ h1{
     font-variant: small-caps;
     font-weight: 700;
     text-align: center;
-    color: white;   
+    color: rgb(243, 247, 4);   
+    text-shadow: 3px 2px black
 }
