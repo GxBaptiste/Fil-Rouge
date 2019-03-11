@@ -1,0 +1,26 @@
+#level1{
+    background-image: url(https://www.cahec.com/wp-content/uploads/2016/08/Silver-Blur-Background-Wallpaper.jpg);
+    height: 76vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login_btn {
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+}
+
+.login_btn:hover {
+    color: black;
+    background-color: white;
+}
+
+div.d-flex.justify-content-center {
+    padding-top: 5vh;
+}
+
+div.d-flex.justify-content-center.links {
+    padding-top: 0vh;
+    align-items: center;
+}
