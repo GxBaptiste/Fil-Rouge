@@ -1,0 +1,51 @@
+<nav class="navbar navbar-dark bg-dark" id="nav">
+  <button routerLink="/Accueil"><img src="../../assets/img/Logo.png" alt="" id="logo"></button>
+  <div class="row">
+    <div class="col-3" id="catbar">
+      <div class="drop" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+        <button class="btn btn-outline-success" ngbDropdownToggle>Catégorie</button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <button class="dropdown-item" routerLink="Categorie/Livre">Livres</button>
+          <button class="dropdown-item" routerLink="Categorie/Film">Film</button>
+          <button class="dropdown-item" routerLink="Categorie/Jeux">Jeux Vidéos</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-8" id="bar-search">
+      <input type="text" id="search_text" name="nom" required="required" class="form-control border-0"
+        placeholder="Chercher un livre, un dvd, ..." data-placeholder="Chercher un livre, un dvd, ..."
+        data-mobile-placeholder="Rechercher" autocomplete="off" [(ngModel)]="nom">
+    </div>
+    <div class="col-1" id="search">
+      <button style="background-color:#343a40; border:none" (click)=search(1) routerLink="Nom/{{nom}}">
+        <img src="../../assets/img/icone-search.png" alt="" id="img">
+      </button>
+    </div>
+  </div>
+
+
+
+  <div class="icone">
+    <button style="background-color:#343a40; border:none" routerLink="/Panier"><img
+        src="../../assets/img/icone-panier.png" id="img" alt=""></button>
+    <div class="btn-group" ngbDropdown role="group">
+      <div *ngIf="!isConnected; else elseBlock">
+        <button style="background-color:#343a40; border:none" (click)="goToLoginPage()">
+          <img src="../../assets/img/icone_log.png" id="img" alt="">
+        </button>
+      </div>
+      <ng-template #elseBlock>
+        <button ngbDropdownToggle style="background-color:#343a40; border:none">
+          <img src="../../assets/img/icone_log.png" id="img" alt="">
+        </button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <button class="dropdown-item" (click)="goToProfil()">Mon profil</button>
+          <button class="dropdown-item" (click)="goToCommande()">Mes commandes</button>
+          <button class="dropdown-item" (click)="goToPanier()">Mon panier </button>
+          <button class="dropdown-item" (click)="deconnect()">Déconnexion</button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</nav>

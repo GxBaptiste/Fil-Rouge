@@ -1,0 +1,32 @@
+<div class="accordion" id="accordionExample" *ngFor="let obj of list_commande">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" aria-expanded="true"
+          aria-controls="collapseOne" [attr.data-target]="'#obj'+obj.id" id="boutonlargeur">
+          <span>
+            <div class="deroule">Détails commande</div>
+          </span>
+        </button>
+        <div class="row">
+          <div class="col-sm">N°Client : {{obj.utilisateur.num_client}}</div>
+          <div class="col-sm">{{obj.reference}}</div>
+          <div class="col-sm">{{obj.etat}} </div>
+          <div class="col-sm">Commandé le : {{obj.dateCommande}}</div>
+          <div class="col-sm">Livré le : {{obj.dateLivraison}}</div>
+          <div class="col-sm">Prix_Commande : {{obj.prixTotal}}</div>
+        </div>
+      </h5>
+
+      <div id="obj{{obj.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="row" *ngFor="let obj2 of obj.produitCommandes">
+            <span class="border-top">
+              <app-liste-produit-commande-admin [produit]=obj2></app-liste-produit-commande-admin>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

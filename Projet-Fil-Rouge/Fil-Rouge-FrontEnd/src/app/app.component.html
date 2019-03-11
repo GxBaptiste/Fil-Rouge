@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <div *ngIf="role === 'ADMIN'; else guest">
+      <app-menu-admin></app-menu-admin>
+    </div>
+    <ng-template #guest>
+      <app-menu></app-menu>
+    </ng-template>
+  </nav>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer></footer>

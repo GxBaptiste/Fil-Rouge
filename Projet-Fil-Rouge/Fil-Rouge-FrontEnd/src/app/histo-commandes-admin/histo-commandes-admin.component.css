@@ -1,0 +1,16 @@
+#boutonlargeur{
+    width: 100%;
+}
+.border-top{
+    width:100%
+}
+.mb-0{
+    background-color: lightgray;
+}
+
+#css{
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

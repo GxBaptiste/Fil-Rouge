@@ -1,0 +1,40 @@
+import { Routes } from '@angular/router';
+import { CreerProduitAdminComponent } from './creer-produit-admin/creer-produit-admin.component';
+import { AccueilAdminComponent } from './accueil-admin/accueil-admin.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { ModificationProduitAdminComponent } from './modification-produit-admin/modification-produit-admin.component';
+import { HistoCommandesAdminComponent } from './histo-commandes-admin/histo-commandes-admin.component';
+import { ListeProduitsAdminComponent } from './liste-produits-admin/liste-produits-admin.component';
+import { PanierComponent } from './panier/panier.component';
+import { ListeProduitComponent } from './liste-produit/liste-produit.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { FicheProduitComponent } from './fiche-produit/fiche-produit.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ProfilComponent } from './profil/profil.component';
+import { PageModifCommandeAdminComponent } from './page-modif-commande-admin/page-modif-commande-admin.component';
+import { CommandeUtilisateurComponent } from './commande-utilisateur/commande-utilisateur.component';
+
+export const ROUTES: Routes = [
+    { path: 'Admin', component: AccueilAdminComponent },
+    { path: '', component: AccueilComponent },
+    { path: 'Produit/:id', component: ModificationProduitAdminComponent },
+    { path: 'Accueil', component: AccueilComponent },
+    { path: 'Categorie/:cat', component: ListeProduitComponent },
+    { path: 'Nom/:nom', component: ListeProduitComponent },
+    { path: 'Login', component: LoginPageComponent },
+    { path: 'SignUp', component: SignUpComponent },
+    { path: 'Profil', component: ProfilComponent },
+    { path: 'ModificationProduit', component: ModificationProduitAdminComponent },
+    { path: 'CreerProduit', component: CreerProduitAdminComponent },
+    { path: 'Historique', component: HistoCommandesAdminComponent },
+    { path: 'Historique/user/:id', component: CommandeUtilisateurComponent },
+    { path: 'Panier', component: PanierComponent },
+    { path: 'ModificationCommande', component: PageModifCommandeAdminComponent },
+    { path: 'ModificationCommande/:id', component: PageModifCommandeAdminComponent },
+    { path: 'ListeProduitsAdmin', component: ListeProduitsAdminComponent },
+    { path: 'ListeProduitsAdmin/:id', component: ListeProduitsAdminComponent },
+    { path: 'Historique/:nom/:prenom/:prix', component: HistoCommandesAdminComponent },
+    { path: 'ListeProduitsAdmin/:nom/:type', component: ListeProduitsAdminComponent },
+    { path: 'FicheProduit/:id', component: FicheProduitComponent }
+
+];
